@@ -17,7 +17,6 @@ self.addEventListener('install', (event) => {
         .then((cache) => cache.addAll(FILES_TO_CACHE))
         .then(self.skipWaiting())
     );
-console.log('Service Worker Installed')
 });
 
 // The activate handler takes care of cleaning up old caches.
@@ -38,7 +37,6 @@ self.addEventListener('activate', (event) => {
         })
         .then(() => self.clients.claim())
     );
-console.log('Service Worker Activated')
 });
 
 // Fetch
